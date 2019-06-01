@@ -34,3 +34,7 @@ group by
     ,utm_medium_regrouping
     ,utm_medium
     ,platform_new
+	
+	
+	+++++++++
+	
