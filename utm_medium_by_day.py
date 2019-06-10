@@ -1,3 +1,5 @@
+class UtmMediumByDay
+
 # -*- coding: UTF-8 -*-
 from pyspark.sql import SparkSession
 import platform
@@ -32,7 +34,7 @@ if __name__ == '__main__':
 
     sqlContext = SparkSession.builder.appName('dddddddd').config("spark.sql.warehouse.dir","/user/hive/warehouse").enableHiveSupport().getOrCreate()
 
-    utm_medium_by_day = sqlContext.sql(s"""
+    utm_medium_by_day = sqlContext.sql("""
 select
     utm_medium_regrouping
     ,utm_medium
