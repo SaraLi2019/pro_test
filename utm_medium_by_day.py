@@ -1,4 +1,3 @@
-class UtmMediumByDay
 
 # -*- coding: UTF-8 -*-
 from pyspark.sql import SparkSession
