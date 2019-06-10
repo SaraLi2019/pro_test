@@ -70,7 +70,7 @@ group by
     utm_medium_by_day.repartition(numPartitions=1).write.mode(saveMode="overwrite").orc(resultHdfsPath)
 
     sqlContext.sql(
-        r"ALTER TABLE sum_event.event_utm_medium_dy_day add if not exists PARTITION (day_id='{yesterday}')  LOCATION '{warehouseLocation}'".format(
+        r"ALTER TABLE sum_event.event_utm_medium_by_day add if not exists PARTITION (day_id='{yesterday}')  LOCATION '{warehouseLocation}'".format(
             yesterday=yesterday, warehouseLocation=resultHdfsPath))
 
     print('End time:', datetime.datetime.now())
